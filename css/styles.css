@@ -257,12 +257,19 @@ iframe {
 
 @media (max-width: 420px) {
     .nav-top-nice-buttons {
-        flex-direction: column;
-        align-items: stretch;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 0.6rem;
+        padding-bottom: 0.4rem;
+        scrollbar-width: none;
+    }
+
+    .nav-top-nice-buttons::-webkit-scrollbar {
+        display: none;
     }
 
     .nav-link {
-        width: 100%;
-        text-align: center;
+        flex: 0 0 auto;
     }
 }
